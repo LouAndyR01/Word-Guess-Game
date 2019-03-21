@@ -2,13 +2,14 @@ body {
     /* margin: 0 auto; */
     background: url(../images/pexels-photo-1457072.jpg) no-repeat;
     padding-top: 20px; 
+    font-family: Arial, Helvetica, sans-serif; 
 }
 
 
 
 .container {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif; 
+    /* font-family: Arial, Helvetica, sans-serif;  */
 }
 
 h1,h2,h3,
@@ -27,7 +28,7 @@ h4,h5,h6 {
 }
 
 #pressKeyTryAgain, 
-#You_lose, 
+#you_lose, 
 #win_image { display: none;}
 .gameplay-column {
     padding-top: 20px;

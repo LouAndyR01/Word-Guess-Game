@@ -17,7 +17,7 @@ function resetGame() {
 
 
     // Math.floor to round down to nearest integer//
-    wordIndex = Math.floor(Math.random() * (wordList.length));
+    wordIndex = Math.floor(Math.random() * (listOfWords.length));
 
     // Clear out arrays//
     usedLetters = [];
@@ -35,10 +35,10 @@ function resetGame() {
     updateDisplay();
 };
 
-    function updateDisplay (); {
+    function updateDisplay () {
 
 
-    document.getElementById('totalWIns').innerText = wins;
+    document.getElementById('totalWins').innerText = wins;
     document.getElementById('guessingWord').innerText = '';
     for (var i = 0; i < guessingWord.length; i++) {
         document.getElementById('guessingWord').innetText += guessingWord[i];
@@ -72,8 +72,8 @@ function makeGuess(letter) {
         }
         
         //checking the letter to see if it has been used//
-        if (guessedLetters.indexOf(letter) === -1) {
-            guessedLetters.push(letter);
+        if (usedLetters.indexOf(letter) === -1) {
+            usedLetters.push(letter);
             evaluateGuess(letter);
         }
     }
@@ -90,11 +90,11 @@ function evaluateGuess(letter) {
             positions.push(i);
         }
     }
-}
+
 
 if (positions.length <= 0) {
     remainingGuesses--;
-    else {
+    } else {
         for(var i = 0; i < positions.length; i++) {
             guessingWord[positions[i]] = letter;
 
