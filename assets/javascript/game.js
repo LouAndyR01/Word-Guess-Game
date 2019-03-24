@@ -10,15 +10,16 @@ var remainingGuesses = 0;
 var gameStarted = false;
 var hasFinished = false;
 var wins = 0;
+// var wordSplit = currentWord.split('')
 
         // var keySounds = new Audio('./asssets/music/firework.mp3');
         // var keySounds = new Audio('./asssets/music/firework.mp3');
-        // console.log(currentWord)
+       
 
 listOfWords.sort(function(){
     return 0.5 - Math.random()
             });
-console.log(listOfWords)
+// console.log(listOfWords)
 
 function resetGame() {
     remainingGuesses = maxTries;
@@ -28,13 +29,13 @@ function resetGame() {
         // Clear out arrays
     guessedLetters = [];
     currentWord = [];
-   
+  
         // document.getElementById('dotsimage').src = "";
   
         // //build the current word and clear it out//
     for (var i = 0; i < listOfWords[currentWordIndex].length; i++) {
         currentWord.push('_');
-}
+    }
 
     document.getElementById('pressKeyTryAgain').style.cssText = 'display: none';
     document.getElementById('you_lose').style.cssText = 'display: none';
