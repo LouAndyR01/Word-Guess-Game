@@ -1,5 +1,4 @@
-# Word-Guess-Game
-Word Guess Game (Challenge - Recommended)
+Word Guess Game 
 
 
 Watch the demo.
